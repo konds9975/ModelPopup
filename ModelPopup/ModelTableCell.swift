@@ -11,6 +11,7 @@ import UIKit
 class ModelTableCell: UITableViewCell {
 
     
+    @IBOutlet weak var btn: UIButton!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var subTitleLbl: UILabel!
     @IBOutlet weak var imgView: UIImageView!

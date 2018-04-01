@@ -42,12 +42,18 @@ class ViewController: UIViewController,ModelViewControllerDelegate {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "ModelViewController") as! ModelViewController
         vc.dataArray = dataArray
         vc.delegate = self
+        vc.providesPresentationContextTransitionStyle = true;
+        vc.definesPresentationContext = true;
         vc.modalPresentationStyle = .overCurrentContext
+        //let nav = UINavigationController(rootViewController: vc)
         self.present(vc, animated: true, completion: nil)
         
     }
     func finishPassing(string: String) {
         print("Notified  \(string)")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "OtherViewController") as! OtherViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
 
 

@@ -34,7 +34,8 @@ class ModelViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         tableBackView.roundCorners([.topLeft, .topRight], radius: 10)
     }
     @IBAction func closemodel(_ sender: Any) {
-        
+        self.delegate?.finishPassing(string: "TEST")
+
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -50,23 +51,18 @@ class ModelViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         cell.titleLbl.text =  dic.value(forKey: "title") as? String
         cell.subTitleLbl.text =  dic.value(forKey: "subTitle") as? String
         cell.imgView.image = UIImage(named: (dic.value(forKey: "image") as? String)!)
-        
-        
-        
+        cell.btn.tag = indexPath.row
+        cell.btn.addTarget(self, action:#selector(buttonClicked), for: .touchUpInside)
         return cell
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         let dic = self.dataArray.object(at: indexPath.row) as! NSMutableDictionary
-        
-        
+    @objc func buttonClicked(sender:UIButton)
+    {
         self.dismiss(animated: true, completion: nil)
+        let dic = self.dataArray.object(at: sender.tag) as! NSMutableDictionary
+        self.delegate?.finishPassing(string: (dic.value(forKey: "title") as? String)!)
         
-        self.dismiss(animated: true) {
-            self.delegate?.finishPassing(string: (dic.value(forKey: "title") as? String)!)
-        }
-       
+        
     }
-    
     
 }
 extension UIView {
