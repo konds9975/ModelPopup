@@ -15,6 +15,8 @@
 		FF33A57B2070C05C00EA4118 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF33A5792070C05C00EA4118 /* LaunchScreen.storyboard */; };
 		FF33A5862070C05C00EA4118 /* ModelPopupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF33A5852070C05C00EA4118 /* ModelPopupTests.swift */; };
 		FF33A5912070C05C00EA4118 /* ModelPopupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF33A5902070C05C00EA4118 /* ModelPopupUITests.swift */; };
+		FF33A59F2070C0BF00EA4118 /* ModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF33A59E2070C0BF00EA4118 /* ModelViewController.swift */; };
+		FF33A5A12070C49100EA4118 /* ModelTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF33A5A02070C49100EA4118 /* ModelTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		FF33A58C2070C05C00EA4118 /* ModelPopupUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModelPopupUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF33A5902070C05C00EA4118 /* ModelPopupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPopupUITests.swift; sourceTree = "<group>"; };
 		FF33A5922070C05C00EA4118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF33A59E2070C0BF00EA4118 /* ModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewController.swift; sourceTree = "<group>"; };
+		FF33A5A02070C49100EA4118 /* ModelTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 			children = (
 				FF33A56D2070C05C00EA4118 /* AppDelegate.swift */,
 				FF33A56F2070C05C00EA4118 /* ViewController.swift */,
+				FF33A59E2070C0BF00EA4118 /* ModelViewController.swift */,
+				FF33A5A02070C49100EA4118 /* ModelTableCell.swift */,
 				FF33A5712070C05C00EA4118 /* Main.storyboard */,
 				FF33A5772070C05C00EA4118 /* Assets.xcassets */,
 				FF33A5792070C05C00EA4118 /* LaunchScreen.storyboard */,
@@ -262,8 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF33A59F2070C0BF00EA4118 /* ModelViewController.swift in Sources */,
 				FF33A5702070C05C00EA4118 /* ViewController.swift in Sources */,
 				FF33A5762070C05C00EA4118 /* ModelPopup.xcdatamodeld in Sources */,
+				FF33A5A12070C49100EA4118 /* ModelTableCell.swift in Sources */,
 				FF33A56E2070C05C00EA4118 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
